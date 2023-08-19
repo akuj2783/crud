@@ -4,8 +4,10 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 
+
 const EditItem= () => {
-  const backendURL=process.env.REACT_APP_BASE_URL || 'http://localhost:3000';
+  const backendURL=import.meta.env.VITE_BASE_URL || 'http://localhost:3000';
+  console.log(backendURL)
 
   const itemId=useParams().id;
   const navigate=useNavigate();

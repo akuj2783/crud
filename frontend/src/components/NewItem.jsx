@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import {redirect, useNavigate} from 'react-router-dom';
 import '../stylesheets/newItem.css';
+import.meta.env
 
 const NewItem = () => {
-  const backendURL=process.env.REACT_APP_BASE_URL || 'http://localhost:3000';
+  const backendURL=import.meta.env.VITE_BASE_URL || 'http://localhost:3000';
 
   const [formData,setFormData]=useState({
     title:"",

@@ -5,8 +5,9 @@ import EditForm from '../components/EditForm'
 import { useNavigate } from 'react-router-dom';
 
 
+
 const Home = () => {
-    const backendURL=process.env.REACT_APP_BASE_URL || 'http://localhost:3000';
+    const backendURL=import.meta.env.VITE_BASE_URL || 'http://localhost:3000';
     const [items,setItems]=useState(null);
     const [editItem, setEditItem] = useState(null);
     const navigate=useNavigate();
