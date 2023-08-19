@@ -6,13 +6,13 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Home = () => {
-
+    //const backendURL=http://localhost:3000
     const [items,setItems]=useState(null);
     const [editItem, setEditItem] = useState(null);
     const navigate=useNavigate();
 
     useEffect(()=>{
-       axios.get('http://localhost:3000/items')
+       axios.get('https://crud-backend-lkrj.onrender.com/items')
        .then(res => {
         setItems(res.data);
       })
@@ -20,7 +20,7 @@ const Home = () => {
     },[]);
 
     const deleteItem=(itemId)=>{
-       axios.delete(`http://localhost:3000/items/delete/${itemId}`)
+       axios.delete(`https://crud-backend-lkrj.onrender.com/items/delete/${itemId}`)
             .then(res=>{
                 const itemsAfterDeletion=items.filter(item=>item._id!==res.data._id)
                 setItems([...itemsAfterDeletion])

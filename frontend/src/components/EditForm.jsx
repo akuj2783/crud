@@ -24,7 +24,7 @@ const EditItem= () => {
     event.preventDefault();
     console.log("form data is ",item);
     try{
-      await axios.put(`http://localhost:3000/items/update/${itemId}`,item)
+      await axios.put(`https://crud-backend-lkrj.onrender.com/items/update/${itemId}`,item)
     }catch (error) {
       console.error('Error while adding new item:', error);}
 
