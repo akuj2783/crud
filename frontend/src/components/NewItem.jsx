@@ -4,7 +4,7 @@ import {redirect, useNavigate} from 'react-router-dom';
 import '../stylesheets/newItem.css';
 
 const NewItem = () => {
-  const backendURL=process.env.BASE_URL || 'http://localhost:3000';
+  const backendURL=process.env.REACT_APP_BASE_URL || 'http://localhost:3000';
 
   const [formData,setFormData]=useState({
     title:"",

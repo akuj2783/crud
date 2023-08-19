@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 const EditItem= () => {
-  const backendURL=process.env.BASE_URL || 'http://localhost:3000';
+  const backendURL=process.env.REACT_APP_BASE_URL || 'http://localhost:3000';
 
   const itemId=useParams().id;
   const navigate=useNavigate();
