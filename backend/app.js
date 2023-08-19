@@ -4,10 +4,11 @@ const cors=require('cors');
 
 const app=express();
 
+const dbUrl = process.env.DB_URL || "mongodb://127.0.0.1:27017/crud";
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb://127.0.0.1:27017/crud')
+mongoose.connect(dbUrl)
 .then(()=>{
     console.log("connected to databse successfully")
 })
