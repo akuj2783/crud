@@ -5,6 +5,7 @@ import axios from 'axios';
 
 
 const EditItem= () => {
+  const backendURL=process.env.BASE_URL || 'http://localhost:3000';
 
   const itemId=useParams().id;
   const navigate=useNavigate();
@@ -24,7 +25,7 @@ const EditItem= () => {
     event.preventDefault();
     console.log("form data is ",item);
     try{
-      await axios.put(`https://crud-backend-lkrj.onrender.com/items/update/${itemId}`,item)
+      await axios.put(`${backendURL}/items/update/${itemId}`,item)
     }catch (error) {
       console.error('Error while adding new item:', error);}
 

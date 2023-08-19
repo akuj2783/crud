@@ -4,6 +4,7 @@ import {redirect, useNavigate} from 'react-router-dom';
 import '../stylesheets/newItem.css';
 
 const NewItem = () => {
+  const backendURL=process.env.BASE_URL || 'http://localhost:3000';
 
   const [formData,setFormData]=useState({
     title:"",
@@ -26,7 +27,7 @@ const NewItem = () => {
   event.preventDefault();
   console.log("form data is ", formData);
   try{
-    await axios.post('https://crud-backend-lkrj.onrender.com/items/new',formData)
+    await axios.post(`${backendURL}/items/new`,formData)
   }catch (error) {
     console.error('Error while adding new item:', error);}
 
