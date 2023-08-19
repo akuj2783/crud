@@ -1,0 +1,97 @@
+/* Container for the cards */
+.homeWrapper {
+    font-family:Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    height: 80vh; /* Set container height using viewport units */
+    overflow-y: auto;
+  }
+  
+  /* Card styling */
+  .itemCard {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .itemCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Card image */
+  .image {
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .image img {
+    width: 100%;
+    object-fit: cover;
+    height: 200px; /* Set a fixed height for uniformity */
+  }
+  
+  /* Card title */
+  .itemTitle h2 {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    color: #383736;
+  }
+  
+  /* Card description */
+  .itemDescription p {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #555555;
+  }
+  
+  /* Card price */
+  .itemPrice span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #464543;
+    margin-top: 10px;
+  }
+  
+  /* Actions */
+  .actions {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Button styling */
+  .btn {
+    padding: 8px 20px;
+    background-color: #dee1e4; /* Subtle button color */
+    color: #575454;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .btn:hover {
+    color: rgb(246, 241, 241);
+    background-color: #989595; /* Darker shade on hover */
+  }
+  
+  /* Loading message */
+  .loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888888;
+    padding: 20px;
+  }
+  

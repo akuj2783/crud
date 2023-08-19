@@ -1,0 +1,79 @@
+/* Default styles */
+.editItemWrapper {
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    padding-top: 40px;
+  }
+  
+  .editItemWrapper h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333333;
+  }
+  
+  .editItemForm {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    max-width: 50%;
+  }
+  
+  .editItemForm label {
+    display: block;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #555555;
+  }
+  
+  .editItemForm input,
+  .editItemForm textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+  
+  .editItemForm textarea {
+    resize: vertical;
+  }
+  
+  .editItemForm button.btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    color: #555555;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .editItemForm button.btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Responsive breakpoints */
+  @media (max-width: 768px) {
+    .editItemForm {
+      width: 70%;
+      max-width: 80%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .editItemForm {
+      width: 90%;
+      max-width: 90%;
+    }
+  }
+  
+  /* Add more breakpoints as needed */
+  
